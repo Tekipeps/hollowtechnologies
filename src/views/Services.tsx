@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import bgBlur from "../assets/images/bgBlur.svg";
 
@@ -17,6 +18,8 @@ import layers from "../assets/icons/layers.svg";
 type Props = { icon?: JSX.Element; image?: any; desc: string; label: string };
 
 export default function Services() {
+  const router = useRouter();
+
   const services: Props[] = [
     {
       image: globe,
@@ -90,7 +93,7 @@ export default function Services() {
           })}
         </div>
 
-        <div className="grid w-full grid-cols-2">
+        <div className="grid w-full grid-cols-2 mt-20">
           <div className="flex flex-col items-start justify-start gap-5">
             <Heading light length={476} text={"We work with your Budget"} />
 
@@ -101,6 +104,13 @@ export default function Services() {
                 "We pride ourselves on providing the highest level of expertise in every project we build."
               }
             />
+
+            <button
+              onClick={() => router.push("/#contact")}
+              className="text-[#B0BACF] text-base font-normal tracking-wide px-6 mt-5 py-2.5 border border-slate-400/20 bg-gradient-to-tr from-[#051B5A] to-[#B0BACF]/20 hover:scale-105 active:scale-95 rounded"
+            >
+              Request a Quote
+            </button>
           </div>
 
           <div className={`w-full h-[${stack.src}px] border`}>

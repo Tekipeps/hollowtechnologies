@@ -64,10 +64,10 @@ export default function Services() {
     <section id="services" className="bg-[#051B5A] w-full">
       <div
         style={bg}
-        className="flex flex-col gap-14 justify-center items-center px-4 pt-32 pb-44 w-full sm:px-10 md:px-20 lg:px-36"
+        className="flex flex-col items-center justify-center w-full px-4 pt-32 gap-14 pb-44 sm:px-10 md:px-20 lg:px-36"
       >
         <div className="flex flex-col justify-start items-center gap-14 w-full max-w-[1100px]">
-          <div className="flex flex-col gap-5 justify-center items-center w-full">
+          <div className="flex flex-col items-center justify-center w-full gap-5">
             <Heading light center length={811} text={"Services we Offer"} />
 
             <HeadingDescription
@@ -80,7 +80,7 @@ export default function Services() {
             />
           </div>
 
-          <div className="grid grid-cols-1 gap-7 w-full md:grid-cols-3 xs:grid-cols-2">
+          <div className="grid w-full grid-cols-1 gap-7 md:grid-cols-3 xs:grid-cols-2">
             {services.map((service: Props) => {
               return (
                 <ServiceCard
@@ -96,9 +96,9 @@ export default function Services() {
 
           <div
             id="pricing"
-            className="flex flex-col-reverse mt-20 w-full sm:items-center sm:flex-row"
+            className="flex flex-col-reverse w-full mt-20 sm:items-center sm:flex-row"
           >
-            <div className="flex flex-col gap-5 justify-start items-start">
+            <div className="flex flex-col items-start justify-start gap-5">
               <Heading light length={476} text={"We work with your Budget"} />
 
               <HeadingDescription
@@ -120,7 +120,7 @@ export default function Services() {
             </div>
 
             <div
-              className={`w-[${stack.width}px] h-[${stack.height}px] overflow-hidden flex justify-center items-center`}
+              className={`w-[${stack.width}px] h-[${stack.height}px] flex justify-center items-center`}
             >
               <Image
                 alt={"stacks"}

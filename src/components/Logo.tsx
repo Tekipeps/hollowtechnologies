@@ -5,10 +5,9 @@ import logo from "../assets/images/logo.svg";
 
 type Props = {
   width: number;
-  height: number;
 };
 
-export default function Logo({ width, height }: Props) {
+export default function Logo({ width }: Props) {
   const router = useRouter();
 
   return (
@@ -20,7 +19,7 @@ export default function Logo({ width, height }: Props) {
       <Image
         width={width}
         src={logo.src}
-        height={height}
+        height={logo.height}
         alt={"hollow technology logo"}
       />
     </button>

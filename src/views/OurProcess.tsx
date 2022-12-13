@@ -44,7 +44,7 @@ export default function OurProcess() {
   return (
     <section
       id="process"
-      className="bg-gradient-to-b w-full from-[#072783]/10 via-[#ECECEE] to-[#ECECEE] pt-24 pb-[13rem] flex justify-center items-center px-4 sm:px-10 md:px-20 lg:px-36"
+      className="bg-gradient-to-b w-full from-[#072783]/10 via-[#ECECEE] to-[#ECECEE] pt-24 pb-24 sm:pb-[13rem] flex justify-center items-center px-4 sm:px-10 md:px-20 lg:px-36"
     >
       <div className="flex flex-col justify-start items-center gap-14 w-full max-w-[1100px]">
         <div className="flex flex-col gap-5 justify-center items-center w-full">

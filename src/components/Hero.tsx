@@ -1,26 +1,27 @@
 import Image from "next/image";
 
-import hero from "../assets/images/hero.svg";
 import Heading from "./Heading";
 import HeadingDescription from "./HeadingDescription";
+
+import hero from "../assets/images/hero.svg";
 
 export default function Hero() {
   return (
     <div
-      className={`w-full flex justify-center h-[35rem] items-start sm:h-[${hero.height}px] text-white bg-[#06216F] relative`}
+      className={`w-full flex justify-center min-h-[35rem] overflow-hidden items-end md:items-start md:h-screen text-white bg-[#06216F]`}
     >
       <div
-        className={`max-w-[1440px] h-full sm:h-[${hero.height}px] w-full flex justify-center items-end sm:items-start relative`}
+        className={`max-w-[1440px] w-full min-h-[26rem] md:h-screen flex justify-center items-end relative`}
       >
         <Image
           src={hero.src}
           width={hero.width}
           height={hero.height}
           alt="hero background image"
-          className="w-full"
+          className="w-full border"
         />
 
-        <div className="flex absolute flex-col gap-4 justify-start items-center px-5 pt-40 w-full h-full sm:pt-56">
+        <div className="absolute flex flex-col items-center justify-start w-full h-full gap-4 px-5 pt-0 sm:pt-56">
           <Heading
             light
             center

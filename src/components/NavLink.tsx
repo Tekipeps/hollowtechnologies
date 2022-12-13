@@ -6,7 +6,7 @@ export default function NavLink({ label, pageSection }: Props) {
   return (
     <li id="nav-link">
       <Link href={`/#${pageSection}`}>
-        <span className="text-base font-normal tracking-wide text-white">
+        <span className="text-base font-light tracking-wide text-white">
           {label}
           <div id="nav-underline" className="h-px bg-white"></div>
         </span>

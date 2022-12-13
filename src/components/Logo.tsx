@@ -3,7 +3,12 @@ import { useRouter } from "next/router";
 
 import logo from "../assets/images/logo.svg";
 
-export default function Logo() {
+type Props = {
+  width: number;
+  height: number;
+};
+
+export default function Logo({ width, height }: Props) {
   const router = useRouter();
 
   return (
@@ -13,9 +18,9 @@ export default function Logo() {
       onClick={() => router.push("/")}
     >
       <Image
-        height={48}
-        width={48.7}
+        width={width}
         src={logo.src}
+        height={height}
         alt={"hollow technology logo"}
       />
     </button>

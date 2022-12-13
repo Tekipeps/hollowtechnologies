@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <nav className="absolute py-2 px-5 md:px-2.5 z-10 mt-5 flex justify-between items-center w-full max-w-[1132.7px] h-[84px]">
       <div className="p-2.5 flex gap-10 justify-center items-center">
-        <Logo />
+        <Logo width={48.7} height={48} />
 
         <ul className="flex justify-center items-center gap-2.5">
           {navLinks.map(({ label, pageSection }: NavLinkProps) => {

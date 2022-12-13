@@ -2,15 +2,22 @@ import Image from "next/image";
 
 import Heading from "./Heading";
 import HeadingDescription from "./HeadingDescription";
-
+import bgBlur from "../assets/images/bgBlur.svg";
 import hero from "../assets/images/hero.svg";
 
 export default function Hero() {
+  const bg = {
+    backgroundSize: "contain",
+    backgroundPosition: "bottom",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(${bgBlur.src})`,
+  };
   return (
     <div
       className={`w-full flex justify-center min-h-[35rem] overflow-hidden items-end md:items-start md:h-screen text-white  bg-gradient-to-b from-[#051D61] to-[#0A2977]`}
     >
       <div
+        style={bg}
         className={`max-w-[1440px] w-full min-h-[26rem] md:h-screen flex justify-center items-end relative`}
       >
         <Image

@@ -14,7 +14,7 @@ export default function index({ title, children }: Props) {
         <title>{title}</title>
         <meta
           name="description"
-          content="Hollow Technologies is a business that helps you bring your software ideas to life. We design and implement the based your business requirements."
+          content="Hollow Technologies is a business that helps you bring your software ideas to life. We design and implement your product based on your business requirements."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

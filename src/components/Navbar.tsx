@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="p-2.5 flex gap-10 justify-center items-center">
         <Logo width={48.7} height={48} />
 
-        <ul className="flex justify-center items-center gap-2.5">
+        <ul className="hidden sm:flex justify-center items-center gap-2.5">
           {navLinks.map(({ label, pageSection }: NavLinkProps) => {
             return (
               <NavLink key={label} label={label} pageSection={pageSection} />

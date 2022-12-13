@@ -62,41 +62,43 @@ export default function Services() {
   return (
     <section
       id="about"
-      className="bg-gradient-to-b w-full from-[#072783]/10 via-[#ECECEE] to-[#072783]/10 pt-32 flex flex-col justify-start items-center gap-14 px-4 sm:px-10 md:px-20 lg:px-36"
+      className="bg-gradient-to-b w-full from-[#072783]/10 via-[#ECECEE] to-[#072783]/10 pt-32 px-4 flex justify-center items-center sm:px-10 md:px-20 lg:px-36"
     >
-      <div className="flex flex-col items-center justify-center w-full gap-5">
-        <Heading
-          dark
-          center
-          length={811}
-          text={"Hollow Technologies Believes that your Expertise Matters."}
-        />
+      <div className="w-full max-w-[1100px] flex flex-col justify-start items-center gap-14">
+        <div className="flex flex-col gap-5 justify-center items-center w-full">
+          <Heading
+            dark
+            center
+            length={811}
+            text={"Hollow Technologies Believes that your Expertise Matters."}
+          />
 
-        <HeadingDescription
-          dark
-          center
-          length={720}
-          text={
-            "We build performing design and quality control tests on every product before shipping it out to you so you can be sure you are receiving a quality product."
-          }
-        />
+          <HeadingDescription
+            dark
+            center
+            length={720}
+            text={
+              "We build performing design and quality control tests on every product before shipping it out to you so you can be sure you are receiving a quality product."
+            }
+          />
+        </div>
+
+        <div className="grid grid-cols-1 gap-7 w-full md:grid-cols-3 xs:grid-cols-2">
+          {about.map((abt: Props) => {
+            return (
+              <AboutCard
+                key={abt.label}
+                desc={abt.desc}
+                icon={abt.icon}
+                image={abt.image}
+                label={abt.label}
+              />
+            );
+          })}
+        </div>
+
+        <Divider />
       </div>
-
-      <div className="grid w-full grid-cols-1 md:grid-cols-3 xs:grid-cols-2 gap-7">
-        {about.map((abt: Props) => {
-          return (
-            <AboutCard
-              key={abt.label}
-              desc={abt.desc}
-              icon={abt.icon}
-              image={abt.image}
-              label={abt.label}
-            />
-          );
-        })}
-      </div>
-
-      <Divider />
     </section>
   );
 }

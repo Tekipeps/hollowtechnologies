@@ -19,7 +19,7 @@ export default function index({ title, children }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative max-w-[1440px] w-full flex flex-col justify-start items-center">
+      <div className="flex relative flex-col justify-start items-center w-full">
         <Navbar />
 
         <div className="w-full flex flex-col bg-[#072783]/10 justify-start items-center">

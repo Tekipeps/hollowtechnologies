@@ -8,7 +8,7 @@ import hero from "../assets/images/hero.svg";
 export default function Hero() {
   return (
     <div
-      className={`w-full flex justify-center min-h-[35rem] overflow-hidden items-end md:items-start md:h-screen text-white bg-[#06216F]`}
+      className={`w-full flex justify-center min-h-[35rem] overflow-hidden items-end md:items-start md:h-screen text-white  bg-gradient-to-b from-[#051D61] to-[#0A2977]`}
     >
       <div
         className={`max-w-[1440px] w-full min-h-[26rem] md:h-screen flex justify-center items-end relative`}
@@ -18,10 +18,10 @@ export default function Hero() {
           width={hero.width}
           height={hero.height}
           alt="hero background image"
-          className="w-full border"
+          className="w-full"
         />
 
-        <div className="absolute flex flex-col items-center justify-start w-full h-full gap-4 px-5 pt-0 sm:pt-56">
+        <div className="absolute flex flex-col items-center justify-start w-full h-full gap-4 px-5 pt-18 md:pt-60">
           <Heading
             light
             center

@@ -13,7 +13,7 @@ export default function Affix() {
             title={"Scroll to top"}
             style={transitionStyles}
             onClick={() => scrollTo({ y: 0 })}
-            className="flex gap-1 justify-center items-center p-2 text-xs font-medium text-white hover:text-black hover:bg-white bg-[#06216F] rounded-md shadow-lg shadow-black/50 border border-white"
+            className="flex gap-1 justify-center items-center p-2 text-xs font-medium text-white hover:text-black hover:bg-white bg-[#051B5A] rounded-md shadow-lg shadow-black/50 border border-white/20"
           >
             <IconArrowUp size={18} />
           </button>

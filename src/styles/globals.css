@@ -83,3 +83,12 @@ code {
 *::-webkit-scrollbar-track {
   background-color: #161616;
 }
+
+#nav-link #nav-underline {
+  width: 0% !important;
+  transition-duration: 0.4s !important;
+}
+
+#nav-link:hover #nav-underline {
+  width: 100% !important;
+}

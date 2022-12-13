@@ -1,17 +1,23 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import logo from "../assets/images/logo.svg";
 
 export default function Logo() {
-  console.log(logo);
+  const router = useRouter();
+
   return (
-    <div className="border">
+    <button
+      type={"button"}
+      className={"outline-0"}
+      onClick={() => router.push("/")}
+    >
       <Image
         height={48}
         width={48.7}
         src={logo.src}
-        alt="hollow technology logo"
+        alt={"hollow technology logo"}
       />
-    </div>
+    </button>
   );
 }

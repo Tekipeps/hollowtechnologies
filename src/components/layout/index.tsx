@@ -22,7 +22,9 @@ export default function index({ title, children }: Props) {
       <div className="relative max-w-[1440px] w-full flex flex-col justify-start items-center">
         <Navbar />
 
-        <div className="w-full">{children}</div>
+        <div className="w-full flex flex-col bg-[#072783]/10 justify-start items-center">
+          {children}
+        </div>
       </div>
     </div>
   );

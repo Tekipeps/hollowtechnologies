@@ -92,3 +92,7 @@ code {
 #nav-link:hover #nav-underline {
   width: 100% !important;
 }
+
+#mobile-menu {
+  transition-duration: 0.3s !important;
+}

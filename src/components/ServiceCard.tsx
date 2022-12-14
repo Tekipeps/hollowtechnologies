@@ -23,8 +23,6 @@ export default function ServiceCard({
   useEffect(() => {
     if (inView) {
       controls.start("show");
-    } else {
-      controls.set("hidden");
     }
   }, [controls, inView]);
 

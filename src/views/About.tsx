@@ -83,8 +83,6 @@ export default function Services() {
   useEffect(() => {
     if (inView) {
       controls.start("show");
-    } else {
-      controls.set("hidden");
     }
   }, [controls, inView]);
 
@@ -94,7 +92,7 @@ export default function Services() {
       className="bg-gradient-to-b w-full from-[#072783]/10 via-[#ECECEE] to-[#072783]/10 pt-32 px-4 flex justify-center items-center sm:px-10 md:px-20 lg:px-36"
     >
       <div className="w-full max-w-[1100px] flex flex-col justify-start items-center gap-14">
-        <div className="flex flex-col gap-5 justify-center items-center w-full">
+        <div className="flex flex-col items-center justify-center w-full gap-5">
           <Heading
             dark
             center
@@ -128,7 +126,7 @@ export default function Services() {
           }}
           initial="hidden"
           animate={controls}
-          className="grid grid-cols-1 gap-7 w-full md:grid-cols-3 xs:grid-cols-2 relative"
+          className="relative grid w-full grid-cols-1 gap-7 md:grid-cols-3 xs:grid-cols-2"
         >
           {about.map((abt: Props, i) => {
             return (

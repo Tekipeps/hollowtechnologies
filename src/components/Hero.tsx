@@ -2,8 +2,9 @@ import Image from "next/image";
 
 import Heading from "./Heading";
 import HeadingDescription from "./HeadingDescription";
-import bgBlur from "../assets/images/bgBlur.svg";
+
 import hero from "../assets/images/hero.svg";
+import bgBlur from "../assets/images/bgBlur.svg";
 
 export default function Hero() {
   const bg = {
@@ -12,23 +13,22 @@ export default function Hero() {
     backgroundRepeat: "no-repeat",
     backgroundImage: `url(${bgBlur.src})`,
   };
+
   return (
-    <div
-      className={`w-full flex justify-center min-h-[35rem] overflow-hidden items-end md:items-start md:h-screen text-white  bg-gradient-to-b from-[#051D61] to-[#0A2977]`}
-    >
+    <div className="w-full flex justify-center h-screen 2xl:h-[50rem] overflow-hidden items-end md:items-start text-white bg-gradient-to-b from-[#051D61] to-[#0A2977]">
       <div
         style={bg}
-        className={`max-w-[1440px] w-full min-h-[26rem] md:h-screen flex justify-center items-end relative`}
+        className="max-w-[1440px] w-full h-full flex justify-center items-end relative"
       >
         <Image
           src={hero.src}
           width={hero.width}
+          alt={"hero image"}
           height={hero.height}
-          alt="hero background image"
-          className="w-full"
+          className={"w-full"}
         />
 
-        <div className="absolute flex flex-col items-center justify-start w-full h-full gap-4 px-5 pt-18 md:pt-60">
+        <div className="flex absolute flex-col gap-4 justify-start items-center px-5 pt-72 w-full h-full xs:pt-60">
           <Heading
             light
             center

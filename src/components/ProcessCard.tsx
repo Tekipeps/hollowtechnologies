@@ -17,8 +17,6 @@ export default function ProcessCard({ icon, image, desc, label }: Props) {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-    } else {
-      controls.set("hidden");
     }
   }, [controls, inView]);
 

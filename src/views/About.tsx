@@ -13,7 +13,17 @@ import checkUser from "../assets/icons/user-check.svg";
 import gitPullRequest from "../assets/icons/git-pull-request.svg";
 import doubleChevronUp from "../assets/icons/double-chevron-up.svg";
 
-type Props = { icon?: JSX.Element; image?: any; desc: string; label: string };
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+type Props = {
+  icon?: JSX.Element;
+  image?: any;
+  desc: string;
+  label: string;
+  variant: "A" | "B";
+};
 
 export default function Services() {
   const about: Props[] = [
@@ -21,43 +31,62 @@ export default function Services() {
       image: design,
       label: "UI/UX Design",
       desc: "We build performing design and quality control tests on every",
+      variant: "A",
     },
     {
       image: code,
       label: "SAAS Development",
       desc: "We build performing design and quality control tests on every",
+      variant: "B",
     },
     {
       image: layers,
       label: "Affordable Hybrid Apps",
       desc: "We build performing design and quality control tests on every",
+      variant: "A",
     },
     {
       image: gitPullRequest,
       label: "High Performance Native Apps",
       desc: "We build performing design and quality control tests on every",
+      variant: "B",
     },
     {
       image: user,
       label: "Give your app User Accounts and track usage",
       desc: "We build performing design and quality control tests on every",
+      variant: "A",
     },
     {
       image: doubleChevronUp,
       label: "In-App Purchases and Premium Subscription",
       desc: "We build performing design and quality control tests on every",
+      variant: "B",
     },
     {
       image: checkUser,
       label: "Authenticate users with ease",
       desc: "We build performing design and quality control tests on every",
+      variant: "A",
     },
     {
       icon: <IconSeo size={28} stroke={1.5} />,
       label: "Search Engine Optimization",
       desc: "We build performing design and quality control tests on every",
+      variant: "B",
     },
   ];
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("show");
+    } else {
+      controls.set("hidden");
+    }
+  }, [controls, inView]);
 
   return (
     <section
@@ -83,10 +112,29 @@ export default function Services() {
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-7 w-full md:grid-cols-3 xs:grid-cols-2">
-          {about.map((abt: Props) => {
+        <motion.div
+          ref={ref}
+          variants={{
+            hidden: { rotate: 90, scale: 0 },
+            show: {
+              rotate: 0,
+              scale: 1,
+              transition: {
+                duration: 0.5,
+                staggerChildren: 0.1,
+                delayChildren: 0.3,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={controls}
+          className="grid grid-cols-1 gap-7 w-full md:grid-cols-3 xs:grid-cols-2 relative"
+        >
+          {about.map((abt: Props, i) => {
             return (
               <AboutCard
+                delay={i}
+                variant={abt.variant}
                 key={abt.label}
                 desc={abt.desc}
                 icon={abt.icon}
@@ -95,7 +143,7 @@ export default function Services() {
               />
             );
           })}
-        </div>
+        </motion.div>
 
         <Divider />
       </div>

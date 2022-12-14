@@ -81,9 +81,10 @@ export default function Services() {
           </div>
 
           <div className="grid w-full grid-cols-1 gap-7 md:grid-cols-3 xs:grid-cols-2">
-            {services.map((service: Props) => {
+            {services.map((service: Props, i) => {
               return (
                 <ServiceCard
+                  delay={i}
                   key={service.label}
                   desc={service.desc}
                   icon={service.icon}

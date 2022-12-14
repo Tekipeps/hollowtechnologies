@@ -15,7 +15,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="w-full flex justify-center h-screen 2xl:h-[50rem] overflow-hidden items-end md:items-start text-white bg-gradient-to-b from-[#051D61] to-[#0A2977]">
+    <div className="w-full flex justify-center h-screen 3xl:h-[61rem] overflow-hidden items-end md:items-start text-white bg-gradient-to-b from-[#051D61] to-[#0A2977]">
       <div
         style={bg}
         className="max-w-[1440px] w-full h-full flex justify-center items-end relative"

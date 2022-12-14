@@ -121,7 +121,7 @@ export default function Services() {
             </div>
 
             <div
-              className={`w-[${stack.width}px] h-[${stack.height}px] flex justify-center items-center`}
+              className={`w-[${stack.width}px] h-[${stack.height}px] flex justify-center items-center py-5`}
             >
               <Image
                 alt={"stacks"}

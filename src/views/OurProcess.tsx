@@ -76,18 +76,34 @@ export default function OurProcess() {
           See Our Process
         </div>
 
-        <div className="grid grid-cols-1 gap-7 w-full md:grid-cols-3 xs:grid-cols-2">
-          {processes.map((process: Props) => {
-            return (
-              <ProcessCard
-                key={process.label}
-                desc={process.desc}
-                icon={process.icon}
-                image={process.image}
-                label={process.label}
-              />
-            );
-          })}
+        <div className="flex flex-col gap-7 w-full">
+          <div className="grid grid-cols-1 gap-7 w-full md:grid-cols-3 xs:grid-cols-2">
+            {processes.slice(0, 3).map((process: Props) => {
+              return (
+                <ProcessCard
+                  key={process.label}
+                  desc={process.desc}
+                  icon={process.icon}
+                  image={process.image}
+                  label={process.label}
+                />
+              );
+            })}
+          </div>
+
+          <div className="grid grid-cols-1 gap-7 w-full xs:grid-cols-2">
+            {processes.slice(3).map((process: Props) => {
+              return (
+                <ProcessCard
+                  key={process.label}
+                  desc={process.desc}
+                  icon={process.icon}
+                  image={process.image}
+                  label={process.label}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

@@ -92,7 +92,7 @@ export default function Services() {
       className="bg-gradient-to-b w-full from-[#072783]/10 via-[#ECECEE] to-[#072783]/10 pt-32 px-4 flex justify-center items-center sm:px-10 md:px-20 lg:px-36"
     >
       <div className="w-full max-w-[1100px] flex flex-col justify-start items-center gap-14">
-        <div className="flex flex-col items-center justify-center w-full gap-5">
+        <div className="flex flex-col gap-5 justify-center items-center w-full">
           <Heading
             dark
             center
@@ -110,38 +110,73 @@ export default function Services() {
           />
         </div>
 
-        <motion.div
-          ref={ref}
-          variants={{
-            hidden: { rotate: 90, scale: 0 },
-            show: {
-              rotate: 0,
-              scale: 1,
-              transition: {
-                duration: 0.1,
-                staggerChildren: 0.1,
-                delayChildren: 0.3,
+        <div className="flex flex-col gap-7 w-full">
+          <motion.div
+            ref={ref}
+            variants={{
+              hidden: { rotate: 90, scale: 0 },
+              show: {
+                rotate: 0,
+                scale: 1,
+                transition: {
+                  duration: 0.1,
+                  staggerChildren: 0.1,
+                  delayChildren: 0.3,
+                },
               },
-            },
-          }}
-          initial="hidden"
-          animate={controls}
-          className="relative grid w-full grid-cols-1 gap-7 md:grid-cols-3 xs:grid-cols-2"
-        >
-          {about.map((abt: Props, i) => {
-            return (
-              <AboutCard
-                delay={i}
-                variant={abt.variant}
-                key={abt.label}
-                desc={abt.desc}
-                icon={abt.icon}
-                image={abt.image}
-                label={abt.label}
-              />
-            );
-          })}
-        </motion.div>
+            }}
+            initial="hidden"
+            animate={controls}
+            className="grid relative grid-cols-1 gap-7 w-full md:grid-cols-3 xs:grid-cols-2"
+          >
+            {about.slice(0, 6).map((abt: Props, i) => {
+              return (
+                <AboutCard
+                  delay={i}
+                  variant={abt.variant}
+                  key={abt.label}
+                  desc={abt.desc}
+                  icon={abt.icon}
+                  image={abt.image}
+                  label={abt.label}
+                />
+              );
+            })}
+          </motion.div>
+
+          <motion.div
+            ref={ref}
+            variants={{
+              hidden: { rotate: 90, scale: 0 },
+              show: {
+                rotate: 0,
+                scale: 1,
+                transition: {
+                  duration: 0.1,
+                  staggerChildren: 0.1,
+                  delayChildren: 0.3,
+                },
+              },
+            }}
+            initial="hidden"
+            animate={controls}
+            className="grid relative grid-cols-1 gap-7 w-full xs:grid-cols-2"
+          >
+            {about.slice(6).map((abt: Props, i) => {
+              return (
+                <AboutCard
+                  delay={i}
+                  variant={abt.variant}
+                  key={abt.label}
+                  desc={abt.desc}
+                  icon={abt.icon}
+                  image={abt.image}
+                  label={abt.label}
+                />
+              );
+            })}
+          </motion.div>
+        </div>
 
         <Divider />
       </div>

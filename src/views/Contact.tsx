@@ -12,7 +12,12 @@ export default function Contact() {
 
         {/* <!-- Calendly inline widget begin --> */}
         <InlineWidget
-          styles={{ width: "100%", height: "750px" }}
+          styles={{
+            width: "100%",
+            height: "750px",
+            border: "none",
+            outline: "none",
+          }}
           url="https://calendly.com/hollowtechnologies/30min"
         />
 

@@ -12,8 +12,13 @@ export default function Contact() {
 
         {/* <!-- Calendly inline widget begin --> */}
         <InlineWidget
-          styles={{ width: "100%", height: "750px" }}
-          url="https://calendly.com/tekipeps/30min"
+          styles={{
+            width: "100%",
+            height: "750px",
+            border: "none",
+            outline: "none",
+          }}
+          url="https://calendly.com/hollowtechnologies/30min"
         />
 
         {/* <!-- Calendly inline widget end --> */}

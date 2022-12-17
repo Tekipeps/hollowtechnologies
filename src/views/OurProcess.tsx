@@ -18,27 +18,27 @@ export default function OurProcess() {
     {
       image: box,
       label: "Research",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Once a project is accepted, our system designers carry out research on project and its requirements",
     },
     {
       image: design,
       label: "Design",
-      desc: "We build performing design and quality control tests on every",
+      desc: "The architecture of the product is layed out by our system designers.",
     },
     {
       image: code,
       label: "Implementation",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Our top notch engineers implement the product from the design of the system.",
     },
     {
       label: "Testing",
       icon: <IconTestPipe size={28} stroke={1.5} />,
-      desc: "We build performing design and quality control tests on every",
+      desc: "Quality tests, usability tests and business logic tests are carried out rigorously to ensure the product is of good quality.",
     },
     {
       label: "Deployment",
       icon: <IconCloudUpload size={28} stroke={1.5} />,
-      desc: "We build performing design and quality control tests on every",
+      desc: "The end product is deployed and available to end users.",
     },
   ];
   return (

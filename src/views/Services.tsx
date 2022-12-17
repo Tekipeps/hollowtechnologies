@@ -24,32 +24,32 @@ export default function Services() {
     {
       image: globe,
       label: "Web Development",
-      desc: "We build performing design and quality control tests on every",
+      desc: "We transform your ideas into interactive and engaging online experiences.",
     },
     {
       image: speed,
       label: "Search Engine Optimization",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Maximize your online visibility and drive traffic to your website with our advanced SEO methods.",
     },
     {
       image: layers,
       label: "CI/CD DevOps",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Let's streamline your software development and deployment process.",
     },
     {
       image: design,
       label: "UI/UX Design",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Our design experts create top notch user interface designs with aesthetics and accessibility at the peak.",
     },
     {
       image: code,
       label: "Mobile Development",
-      desc: "We build performing design and quality control tests on every",
+      desc: "We develop high quality mobile apps on all platforms.",
     },
     {
       image: layout,
       label: "Others",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Whatever your software needs are, our experienced engineers can bring your ideas to life.",
     },
   ];
 

@@ -30,49 +30,49 @@ export default function Services() {
     {
       image: design,
       label: "UI/UX Design",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Transform your digital experience with intuitive and visually stunning UI/UX design.",
       variant: "A",
     },
     {
       image: code,
       label: "SAAS Development",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Streamline your business operations with cutting-edge SAAS development.",
       variant: "B",
     },
     {
       image: layers,
       label: "Affordable Hybrid Apps",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Get the best of both worlds with affordable hybrid app development.",
       variant: "A",
     },
     {
       image: gitPullRequest,
       label: "High Performance Native Apps",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Utilizing the latest technologies and best practices, we build apps that deliver a seamless and intuitive user experience on any device.",
       variant: "B",
     },
     {
       image: user,
       label: "Give your app User Accounts and track usage",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Gain valuable insights into user behavior with our powerful usage tracking capabilities.",
       variant: "A",
     },
     {
       image: doubleChevronUp,
       label: "In-App Purchases and Premium Subscription",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Monetize your app and drive revenue with in-app purchases and premium subscriptions.",
       variant: "B",
     },
     {
       image: checkUser,
       label: "Authenticate users with ease",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Effortlessly secure your users online presence with hassle-free user authentication.",
       variant: "A",
     },
     {
       icon: <IconSeo size={28} stroke={1.5} />,
       label: "Search Engine Optimization",
-      desc: "We build performing design and quality control tests on every",
+      desc: "Maximize your online visibility and drive traffic to your website with our advanced SEO methods.",
       variant: "B",
     },
   ];
@@ -110,9 +110,8 @@ export default function Services() {
           />
         </div>
 
-        <div className="flex flex-col gap-7 w-full">
+        <div ref={ref} className="flex flex-col gap-7 w-full">
           <motion.div
-            ref={ref}
             variants={{
               hidden: { rotate: 90, scale: 0 },
               show: {
